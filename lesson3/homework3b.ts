@@ -64,7 +64,7 @@ console.log(car.acceleration); // 0
 car.accelerate(60);
 console.log(car.acceleration); // 60
 
-/*********** Number 3 */
+/*********** Number 4 */
 interface base{
     width:number;
     length:number;
