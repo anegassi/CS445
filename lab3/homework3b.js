@@ -18,10 +18,10 @@ var bankAccount = {
 };
 var myself = {
     name: "John",
-    bankAccount: bankAccount,
+    bAccount: bankAccount,
     hobbies: ["Violin", "Cooking"]
 };
-myself.bankAccount.deposit(3000);
+myself.bAccount.deposit(3000);
 console.log(myself);
 /*********** Number 3 */
 var Car = /** @class */ (function () {
@@ -44,12 +44,13 @@ car.accelerate(60);
 console.log(car.acceleration); // 60
 var baseObject = {
     width: 0,
-    length: 0
+    length: 0,
+    calcSize: function () {
+        return this.width * this.length;
+    }
 };
 var rectangle = Object.create(baseObject);
 rectangle.width = 5;
 rectangle.length = 2;
-rectangle.calcSize = function () {
-    return this.width * this.length;
-};
+rectangle.calcSize();
 console.log(rectangle.calcSize()); // 10

@@ -18,10 +18,10 @@ interface bank {
     money:number;
     deposit(value:number): void;
 }
-interface user{
+interface user {
     name:string;
     hobbies:Array<string>
-    bankAccount: typeof bankAccount;
+    bAccount:bank; //typeof bankAccount;
 
 }
 let bankAccount:bank = { 
@@ -34,11 +34,11 @@ let bankAccount:bank = {
 
 let myself:user = { 
     name: "John", 
-    bankAccount: bankAccount, 
+    bAccount:<bank> bankAccount, 
     hobbies: ["Violin", "Cooking"] 
 }; 
 
-myself.bankAccount.deposit(3000); 
+myself.bAccount.deposit(3000); 
 console.log(myself);
 
 /*********** Number 3 */
@@ -68,18 +68,20 @@ console.log(car.acceleration); // 60
 interface base{
     width:number;
     length:number;
+    calcSize():number;
 }
 let baseObject:base= { 
     width: 0, 
-    length: 0 
+    length: 0,
+    calcSize:function() { 
+        return this.width * this.length; 
+    }
 }; 
-let rectangle = Object.create(baseObject); 
+let rectangle:base= Object.create(baseObject); 
 
 rectangle.width = 5; 
 rectangle.length = 2; 
 
-rectangle.calcSize = function() { 
-    return this.width * this.length; 
-}; 
+rectangle.calcSize();
 
 console.log(rectangle.calcSize()); // 10
