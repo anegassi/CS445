@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Live Collection vs Static Collection</title>
+</head>
+
+<body>
+    <div id="main">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+    <button id="btn1">Static Collection</button>
+    <button id="btn2">Live Collection</button>
+    <script>
+        const main = document.getElementById("main");
+        // non-live NodeList
+        let btnsStatic = main.querySelectorAll('button');
+        console.log(btnsStatic.length); // output: 3
+
+        document.getElementById("btn1").onclick = function() {
+            let btn = document.createElement('button');
+            btn.textContent = 'static 4';
+            main.append(btn);
+
+            // logs the first three buttons, but not the new one
+            console.log(btnsStatic);
+        }
+
+        // Live NodeList
+        let btnsLive = main.getElementsByTagName('button');
+        console.log(btnsLive.length); // output: 3
+        document.getElementById("btn2").onclick = function() {
+            // Inject a new button
+            let btn = document.createElement('button');
+            btn.textContent = 'live 4';
+            main.append(btn);
+
+            // logs all buttons, including the new one
+            console.log(btnsLive);
+        }
+    </script>
+</body>
+
+</html>

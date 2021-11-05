@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="clickIt">Click here</button>
+    <br>
+
+    <b id="effect"></b>
+
+    <script>
+        const x = document.getElementById("clickIt");
+
+        x.addEventListener("click", Respond);
+
+        function Respond(e) {
+            document.getElementById("effect").innerHTML +=
+                "Type of event triggered = " + e.type + "<br><br>";
+            x.removeEventListener("click", Respond);
+            document.getElementById("effect").innerHTML +=
+                "Now click Event is disabled !! " + "<br><br>";
+            x.innerText = "Click is disable !";
+
+            // The click event is only one time triggered
+            // by clicking the "click here" button.
+
+        }
+    </script>
+</body>
+
+</html>

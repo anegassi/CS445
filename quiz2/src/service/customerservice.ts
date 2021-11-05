@@ -5,7 +5,7 @@ const customers = require("../datasource/crmdata");
 
 class CustomerService{
 
-    public static  async getCustomerByid(id: number){
+    public static  async getCustomerByid(id: number):Promise<Customer>{
      for(let c of customers){
         if(c.getcustomerId() === id){
            return c;

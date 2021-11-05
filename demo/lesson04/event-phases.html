@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body id="bdy">
+    <div id="container">
+        <p id="btn">Click Me!</p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('bdy')
+            .addEventListener('click', function() {
+                alert('Body!');
+            }); //bubbling phase
+        document.getElementById('container')
+            .addEventListener('click', function() {
+                alert('Div!');
+            }, true); //capture phase
+        document.getElementById('btn')
+            .addEventListener('click', function(event) {
+                alert('Text clicked!');
+                event.stopPropagation();
+            }); //bubbling phase
+    </script>
+</body>
+
+</html>

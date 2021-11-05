@@ -1,7 +1,7 @@
 window.onload=calc;
 function calc(){
     
-    document.getElementById("sumButton").addEventListener("change",inputSum)
+    document.getElementById("sumButton").addEventListener("click",inputSum)
     
 }
 

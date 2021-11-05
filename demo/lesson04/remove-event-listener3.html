@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h3>Click this button to stop hovering effect !!</h3>
+    <button id="clickIt" onclick="RespondClick()">Click here</button>
+
+    <h1 id="hoverPara">Hover over this Text !</h1>
+
+    <b id="effect"></b>
+
+    <script>
+        const y = document.getElementById("hoverPara");
+
+        y.onmouseover = function() {
+            document.getElementById("effect").innerHTML +=
+                "mouseover Event !!" + "<br>";
+        }
+
+        function RespondClick() {
+            y.onmouseover = null;
+            document.getElementById("effect").innerHTML +=
+                'You clicked the "click here" button' + "<br>" +
+                "Now mouseover event doesn't work !!";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="myBtn">Try it</button>
+    <script>
+        function myFunction(event) {
+            alert("Hello World!");
+            // Try to remove me below
+            event.stopImmediatePropagation();
+        }
+
+        function someOtherFunction() {
+            alert("I will not get to say Hello World");
+        }
+        const myBtn = document.getElementById("myBtn");
+        myBtn.addEventListener("click", myFunction);
+        myBtn.addEventListener("click", someOtherFunction);
+    </script>
+</body>
+
+</html>

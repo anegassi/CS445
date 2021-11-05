@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Two ways to listen for an event</title>
+</head>
+
+<body>
+    <button id="btn1">Button 1 - onclick</button>
+    <button id="btn2">Button 2 - addEventListener</button>
+    <script>
+        const btn1 = document.getElementById("btn1");
+        btn1.onclick = function() {
+            console.log('Button 1 clicked.....1');
+        }
+        btn1.onclick = function() {
+            console.log('Button 1 clicked.....2');
+        }
+
+        const btn2 = document.getElementById("btn2");
+        btn2.addEventListener('click', function() {
+            console.log('Button 2 clicked.....1');
+        });
+        btn2.addEventListener('click', function() {
+            console.log('Button 2 clicked.....2');
+        });
+    </script>
+</body>
+
+</html>
