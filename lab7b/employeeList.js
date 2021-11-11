@@ -25,7 +25,7 @@ randomFetchedData.then(response=> response.json())  //  parse the response as JS
 function fetchBtn(){
     document.getElementById("btn").onclick= function () {
         let randomFetchedData = fetch('https://randomuser.me/api/?results=5')
-randomFetchedData.then(response=> response.json())  //  parse the response as JSON
+randomFetchedData.then(response=> response.json())  
             .then((response) => {
                 let innerDiv= document.getElementById("innerDiv");
                      innerDiv.innerHTML="";
