@@ -1,0 +1,29 @@
+#mainDiv {
+  margin: auto;
+  margin-top: 50px;
+  width: 400px;
+}
+.innerDiv {
+  width: auto;
+  border-top: 0.2rem #e0e0e0 solid;
+  overflow: auto;
+}
+p {
+  text-align: center;
+}
+button {
+  color: white;
+  background-color: greenyellow;
+  padding: 10px 25px;
+  border-radius: 8px;
+  margin-left: 40%;
+}
+#imgDiv {
+  width: 150px;
+  height: 150px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+img {
+  max-width: 100%;
+}

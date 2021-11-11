@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const jsonString =
+        '{"window": {"title": "Sample Widget","width": 500,"height": 500}, "image":{"src": "images/logo.png", "coords": [250, 150, 350, 400], "alignment": "center" },"messages": [ {"text": "Save", "offset": [10, 30]},{"text": "Help", "offset": [ 0, 50]}, {"text": "Quit", "offset": [30, 10]}], "debug": "true" }';
+      // when writing stringified JSON write it in one line, if you have space in between it will show error so it is important that you write in one line without space.
+      const data = JSON.parse(jsonString);
+
+      let title = data.window.title;
+      console.log(title); //   Sample Widget
+      let coord = data.image.coords[2];
+      console.log(coord); //   350
+      let len = data.messages.length;
+      console.log(len); //  3
+      //let y = data.messages[messages.length - 1].offset[1];
+      let y = data.messages[2].offset[1];
+      console.log(y); //   10
+      const datastringifiy = JSON.stringify(data);
+      console.log(datastringifiy);
+    </script>
+  </head>
+  <body>
+    <h1>HELLO JSON DEMO !!!</h1>
+  </body>
+</html>
