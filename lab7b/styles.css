@@ -3,10 +3,11 @@
   margin-top: 50px;
   width: 400px;
 }
-.innerDiv {
+.innerDiv1 {
   width: auto;
   border-top: 0.2rem #e0e0e0 solid;
-  overflow: auto;
+  height: 250px;
+  padding-bottom: 20px;
 }
 p {
   text-align: center;
@@ -18,8 +19,11 @@ button {
   border-radius: 8px;
   margin-left: 40%;
 }
-
+#image {
+}
 img {
   max-width: 100%;
   border-top: 1rem;
+  float: left;
+  overflow: auto;
 }
