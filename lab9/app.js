@@ -1,17 +1,18 @@
 const shoppingCart = (function () {
-    let basket = []; //array of items
+    let basket = []; 
     return {
         upsertItem: function (item) {
             let hasUpdated = false;
             for (let eachItem of basket) {
-                if (eachItem.id === item.id) { // means item exists in basket
+                if (eachItem.id === item.id) { 
                     eachItem.count = item.count;
                     eachItem.product.name = item.product.name;
                     eachItem.product.price = item.product.price;
                     hasUpdated = true;
                 }
             }
-            if(!hasUpdated) {basket.push(item);}
+            if(!hasUpdated) 
+            {basket.push(item);}
         },
 
         getItemsCount: function () {
