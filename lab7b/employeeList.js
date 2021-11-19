@@ -35,7 +35,7 @@ randomFetchedData.then(response=> response.json())
                 let arrayOfEmployees= response.results;     
                 console.log(arrayOfEmployees);
                 for(let emp of arrayOfEmployees){
-                  let row=`   <div id="innerDiv" class="innerDiv">
+                  let row=`   <div id="innerDiv1" class="innerDiv">
                   <img src="${emp.picture.medium}" alt="" />
                   <article id="article">
                     <ul>
